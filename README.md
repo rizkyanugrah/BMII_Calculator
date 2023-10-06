@@ -27,4 +27,4 @@ SSH:
 git clone git@github.com:rizkyanugrah/BMII_Calculator.git
 ```
 
-- After cloning, open index.html into browser
+## After cloning, open index.html into your browser
