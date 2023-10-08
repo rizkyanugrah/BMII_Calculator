@@ -1,7 +1,24 @@
+// Variabel For Color of status
+const statusColors = {
+  Underweight: "#D80032",
+  "Normal weight": "#4CAF50",
+  Overweight: "#FFC107",
+  Obesity: "#FF5722",
+  "Invalid BMI": "#000000",
+};
+
 // Function for Calculate BMI
 BMI_Calculate = () => {
   const weightValue = document.getElementById("weight").value;
   const heightValue = document.getElementById("height").value;
+
+  // Validation input
+  if (weightValue === "" || heightValue === "") {
+    const result = document.getElementById("result");
+    result.innerHTML = "Masukkan berat dan tinggi terlebih dahulu!";
+    result.style.color = "#D80032";
+    return;
+  }
 
   const calculation = weightValue / (heightValue / 100) ** 2;
 
@@ -25,7 +42,11 @@ BMI_Calculate = () => {
   }
 
   const result = document.getElementById("result");
-  result.innerHTML = `BMI: ${calculation.toFixed(2)} - Status: ${status}`;
+  result.innerHTML = `BMI: ${calculation.toFixed(
+    2
+  )} - Status: <span id="status">${status}</span>`;
+  const statusElement = document.getElementById("status");
+  statusElement.style.color = statusColors[status];
 };
 
 // Function for reset value
