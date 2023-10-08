@@ -4,18 +4,15 @@ A new Javascript project.
 
 ### Demo
 
-- LINK Hosting
+- https://bmi-calculator-kappa-silk.vercel.app/
 
 ### Preview Gambar
 
-_Tampilan Awal_
-![Image 1](https://imgur.com/ThTiHJ9)
+![Image 1](https://i.imgur.com/ThTiHJ9.png)
 
-_Tampilan Dengan Input_
-![Image 2](https://imgur.com/a/F6nfZf0)
+![Image 2](https://i.imgur.com/wRpFGot.png)
 
-_Tampilan Result_
-![Image 3](https://imgur.com/a/9DJ28ik)
+![Image 3](https://i.imgur.com/A2dzbr8.png)
 
 ## Getting Started
 
