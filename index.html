@@ -11,8 +11,8 @@
 <body>
 
     <header>
-        <h1>Selamat Datang di BMI Calculator</h1>
-        <p>Kalkulator BMI untuk Menentukan Berat Badan Ideal Anda.</p>
+        <h1>Selamat Datang Di BMI Calculator</h1>
+        <p>Kalkulator BMI Untuk Menghitung Berat Badan Ideal Anda.</p>
     </header>
     <nav>
         <ul>
@@ -22,9 +22,10 @@
         </ul>
     </nav>
 
-
-
     <section class="content">
+        <img src="assets/img/bmi.jpg" alt="foto">
+        <p>Silakan anda masukan <br> Berat badan dan Tinggi badan anda.</p>
+        <br>
         <input type="number" id="weight" min="1" required class="input">
         <label for="weight" class="weight">
             <span style="transition-delay:0ms">W</span><span style="transition-delay:50ms">E</span><span
@@ -43,9 +44,11 @@
                 style="transition-delay:300ms">(</span><span style="transition-delay:350ms">C</span><span
                 style="transition-delay:400ms">M</span><span style="transition-delay:450ms">)</span>
         </label>
-        <br>
-        <button class="btn-reset" onclick="resetValue()">Reset</button>
-        <button class="btn-hitung" onclick="BMI_Calculate()">Hitung BMI</button>
+
+        <div class="button-content">
+            <button class="btn-reset" onclick="resetValue()">Reset Input</button>
+            <button class="btn-hitung" onclick="BMI_Calculate()">Hitung BMI</button>
+        </div>
 
         <div id="result"></div>
     </section>

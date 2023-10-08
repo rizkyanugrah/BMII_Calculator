@@ -52,17 +52,61 @@ nav a:hover {
 }
 /* end Style Navigation Menu */
 
-/* Content Start */
+/* Content style Start */
 .content {
-  background-color: #e0e4cc;
+  background-color: #d2e0fb;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   padding: 25px;
   border-radius: 10px;
   max-width: 50vw;
-  height: 60vh;
+  height: 105vh;
   margin: 5vh auto 5vh auto;
   position: relative;
-  width: 100vw;
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Style for image */
+.content img {
+  width: 75%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+.content p {
+  font-size: 1.2rem;
+  margin: 20px 0;
+  text-align: center;
+  color: #333;
+  font-weight: bold;
+}
+
+.content p::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #007bff; /* Warna garis bawah */
+  margin: 10px auto;
+}
+.content p::before {
+  content: "⚖️";
+  display: block;
+  font-size: 2rem;
+  margin: 10px auto;
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 .input {
@@ -70,7 +114,7 @@ nav a:hover {
   outline: none;
   border-radius: 15px;
   padding: 1em;
-  background-color: #ccc;
+  background-color: #f9f3cc;
   box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.3);
   transition: 300ms ease-in-out;
   margin-bottom: 2em;
@@ -83,23 +127,24 @@ nav a:hover {
   outline: 0;
   background-color: white;
   transform: scale(1.05);
-  box-shadow: 13px 13px 100px #969696, -13px -13px 100px #ffffff;
+  box-shadow: 13px 13px 5px #969696, -13px -13px 100px #ffffff;
 }
 
 .weight {
   position: absolute;
-  top: 7vh;
+  top: 65vh;
   left: 3vw;
   pointer-events: none;
 }
 .height {
   position: absolute;
-  top: 21vh;
+  top: 79vh;
   left: 3vw;
   pointer-events: none;
 }
 
 .content label span {
+  font-weight: bold;
   display: inline-block;
   font-size: 18px;
   min-width: 5px;
@@ -109,11 +154,57 @@ nav a:hover {
 
 .content input:focus + label span,
 .content input:valid + label span {
-  color: lightblue;
+  font-weight: bold;
+  color: #000;
   transform: translateY(-2.5em);
 }
 
-/* End Content */
+/* Style For Button */
+.button-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-hitung {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.btn-hitung:hover {
+  background-color: #0056b3;
+}
+
+.btn-reset {
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.btn-reset:hover {
+  background-color: #cc0000;
+}
+
+/* Style For Result of BMI Calculation */
+#result {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+/* End Style Content */
 
 /* footer start */
 footer {
@@ -229,7 +320,7 @@ footer {
 /* Add responsive design */
 @media (max-width: 768px) {
   html {
-    overflow-y: hidden;
+    overflow-x: hidden;
   }
   /* FOOTER */
   footer {
